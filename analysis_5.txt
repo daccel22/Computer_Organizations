@@ -1,0 +1,5 @@
+根据MARS内置的Data Cache Simulation Tool，构建一个容量为8字节的cache，
+要求块大小为4字节（one word），替换策略为LRU，组策略为全相联。运行上述
+MIPS程序，得到cache命中率为多少？
+
+0%
