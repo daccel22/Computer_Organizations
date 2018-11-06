@@ -1,0 +1,28 @@
+1.请说明程序实现的功能。
+array[0]=array[1]=array[2]=1;
+array[i]=array[i-1]+array[i-2]+array[i-3]; //i>=3&&i<28
+
+功能同如下C程序
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main(void) {
+	int i, num, flag,a,b,c;
+	num = 25;
+	flag = 0;
+	int* array;
+	array = (int*)malloc(sizeof(int)*(num + 3));
+	array[0] = array[1] = array[2] = 1;
+	for (i = num; i > 0; i--) {
+		a = array[flag];
+		b = array[flag + 1];
+		c = array[flag + 2];
+		array[flag + 3] = a + b + c;
+		flag++;
+	}
+	//test
+	for (i = 0; i < num + 3; i++)
+		printf("%d ", array[i]);
+	return 0;
+}
+
